@@ -7,3 +7,9 @@ Invoke-WebRequest https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/i
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ./installer.ps1 ./.cache/dein
 New-Item -ItemType SymbolicLink -Value ./.cache -Path ~ -Name .cache
+
+#install powershell theme
+Install-Module posh-git -Scope CurrentUser
+Install-Module oh-my-posh -Scope CurrentUser
+#in case of PS Core
+#Install-Module -Name PSReadLine -AllowPrerelease -Scope CurrentUser -Force -SkipPublisherCheck
